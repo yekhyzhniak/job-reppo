@@ -1,0 +1,194 @@
+header{
+    position: relative;
+    width: 100%;
+}
+
+.header{
+    position: relative;
+    &__content{
+        position: relative;
+        padding: 20.5px 0;
+        display: flex;
+        align-items: center;
+        @include m-tablet{
+            justify-content: space-between;
+        }
+    }
+    &__logo{
+        margin-right: 20px;
+        @include m-tablet{
+            margin-right: 0;
+            align-self: flex-start;
+        }
+    }
+    &__menu{
+        position: relative;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        @include m-tablet{
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            padding-top: 100px;
+        }
+        @include m-phone{
+            // display: none;
+        }
+        
+        &-item{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 40px;
+            @include m-tablet{
+                margin-bottom: 30px;
+                // width: 400px;
+            }
+            @include m-phone{
+            //     width: 10px;
+                height: 100%;
+            }
+        }
+        &-item:first-child{
+            @include m-phone{
+                flex-direction: column;
+            }
+        }
+    }
+    &__brg{
+        margin-right: 20px;
+        &-select{
+            border: none;
+            font-family: 'Gotham Rounded', sans-serif;
+            font-style: normal;
+            font-weight: 325;
+            font-size: 13px;
+            line-height: 24px;
+            color: #28303F;
+        }
+        @include m-phone{
+            margin: 0;
+            margin-bottom: 30px;
+        }
+    }
+    &__link{
+        font-style: normal;
+        font-weight: 325;
+        font-size: 13px;
+        line-height: 24px;
+    }
+    &__btn:not(:first-child){
+        margin-left: 20px;
+    }
+    &__btn{
+        width: 90px;
+        height: 44px;
+        border-radius: 24px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__btn:last-child{
+        background: #ECF5FB;
+        color: #2F4590;
+    }
+    &__search{
+        width: 300px;
+        height: 40px;
+        border-radius: 100px;
+        background: #ECF5FB;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        &-input{
+            border: none;
+            color: #2F4590;
+            background: #ECF5FB;
+            font-family: 'Gotham Rounded', sans-serif;
+            font-style: normal;
+            font-weight: 300;
+            font-size: 14px;
+            line-height: 17px;
+            color: #2F4590;
+        }
+        &-select{
+            width: 50px;
+            border: none;
+            color: #2F4590;
+            background: #ECF5FB;
+            
+        }
+        &-value{
+            font-family: 'Gotham Rounded', sans-serif;
+            font-style: normal;
+            font-weight: 300;
+            font-size: 14px;
+            line-height: 17px;
+            color: #2F4590;
+        }
+        @include m-phone{
+            width: 200px;
+        }
+    }
+}
+
+.menu-btn {
+	width: 36px;
+	height: 31px;
+	padding: 5px;
+	margin-top: -5px;
+	margin-left: -5px;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	display: none;
+    z-index: 10;
+    position: relative;
+    @include m-tablet() {
+        display: flex;
+        align-self: self-start;
+    }
+	&__wrap {
+		width: 26px;
+		height: 21px;
+		position: relative;
+	}
+	span {
+		position: absolute;
+		top: 50%;
+		background-color: #2F4590;
+		width: 100%;
+		height: 2px;
+		margin-top: -1px;
+		border-radius: 0px;
+		transition: transform 0.2s, opacity 0.2s, margin-top 0.2s;
+        // Внутрь инклуда ложим параметры, которые будут юзаться для закрывашки бургера, только для спана!
+        @include m-tablet() {
+            
+        }
+		&:nth-child(1) {
+			transform: translateY(-8px);
+		}
+		&:nth-child(2) {
+			width: 17px;
+		}
+		&:nth-child(3) {
+			transform: translateY(8px);
+		}
+	}
+	&.active {
+		span {
+			&:nth-child(1) {
+				transform: translateY(0) rotate(-45deg);
+			}
+			&:nth-child(2) {
+				width: 100%;
+				opacity: 0;
+			}
+			&:nth-child(3) {
+				transform: translateY(0) rotate(45deg);
+			}
+		}
+	}
+}
