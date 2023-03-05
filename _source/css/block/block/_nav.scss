@@ -1,0 +1,29 @@
+.nav{
+    padding: 22px 0;
+    display: flex;
+    @include m-tablet{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    &__link{
+        display: block;
+        font-family: 'Gotham Rounded';
+        font-style: normal;
+        font-weight: 325;
+        font-size: 13px;
+        line-height: 24px;
+        color: #000000;
+        @include m-tablet{
+            font-size: 24px;
+        }
+    }
+    &__link:not(:last-child){
+        margin-right: 20px;
+        @include m-tablet{
+            margin-right: 0;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+    }
+
+}

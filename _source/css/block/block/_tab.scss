@@ -1,0 +1,75 @@
+.tab{
+    position: relative;
+    border-radius: 32px;
+    overflow: hidden;
+    margin-bottom: 67px;
+
+    &__bg{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: #2F4590;
+        z-index: 1;
+    }
+    &__content{
+        position: relative;
+        z-index: 2;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        @include m-tablet{
+            flex-direction: column;
+        }
+    }
+    &__texts{
+        padding-top: 76px;
+        padding-left: 30px;
+        @include m-tablet{
+            align-self: center;
+        }
+        @include m-phone{
+            padding: 30px 10px 0 10px;
+        }
+
+        &-title{
+            font-style: normal;
+            font-weight: 350;
+            font-size: 36px;
+            line-height: 42px;
+            color: #FFFFFF;
+            max-width: 400px;
+            margin-bottom: 32px;
+            @include m-tablet{
+                max-width: 100%;
+                text-align: center;
+            }
+        }
+        &-subtitle{
+            font-style: normal;
+            font-weight: 325;
+            font-size: 20px;
+            line-height: 42px;
+            color: #FFFFFF;
+            max-width: 330px;
+            @include m-tablet{
+                max-width: 100%;
+                margin-bottom: 32px;
+            }
+        }
+    }
+    &__pic{
+        width: 770px;
+        height: 460px;
+        @include m-tablet-wide{
+            width: 600px;
+        }
+        @include m-tablet{
+            width: 100%;
+        }
+        &-img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}

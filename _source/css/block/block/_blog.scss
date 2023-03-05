@@ -1,0 +1,58 @@
+.blog{
+    position: relative;
+    &__content{
+        position: relative;
+        padding: 67px 0;
+        @include m-phone{
+            padding: 67px 0 57px 0;
+        }
+    }
+    &__title{
+        font-weight: 350;
+        font-size: 36px;
+        line-height: 66px;
+        color: #2F4590;
+        display: flex;
+        justify-content: flex-start;
+        margin-bottom: 32px;
+    }
+    &__cards{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        &-item{
+            background: #ECF5FB;
+            border-radius: 32px;
+            padding: 20px 50px;
+            flex-grow: 0;
+            flex-shrink: 1;
+            flex-basis: calc(100% / 4 - 10px);
+            max-width: calc(100% / 4 - 10px);
+            @include m-tablet{
+                padding: 20px;
+            }
+            @include m-phone{
+                flex-basis: calc(100% / 2 - 10px);
+                max-width: calc(100% / 2 - 10px);
+                margin-bottom: 10px;
+            }
+        }
+        &-itemTitle{
+            font-family: 'Verdana';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 32px;
+            color: #2F4590;
+            margin-bottom: 12px;
+        }
+        &-itemSubtitle{
+            font-style: normal;
+            font-weight: 325;
+            font-size: 13px;
+            line-height: 21px;
+            color: #000000;
+        }
+    }
+}

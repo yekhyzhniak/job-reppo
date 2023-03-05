@@ -1,0 +1,96 @@
+.footer{
+    position: relative;
+    &__bg{
+        position: absolute;
+        z-index: 1;
+        width: 1440px;
+        height: 340px;
+        background: #0E3764;
+        right: 50%;
+        transform: translateX(50%);
+
+    }
+    &__content{
+        position: relative;
+        z-index: 2;
+    }
+    &__links{
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 2px solid #fff;
+        padding: 60px 0;
+    }
+    &__all{
+        display: flex;
+        &-row:not(:last-child){
+            margin-right: 50px;
+        }
+        &-title{
+            font-style: normal;
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 32px;
+            color: #FFFFFF;
+            margin-bottom: 14px;
+        }
+        &-link{
+            display: block;
+            font-family: 'Verdana';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 24px;
+            color: #EAEBDC;
+        }
+        &-link:not(:last-child){
+            margin-bottom: 10px;
+        }
+        &-tell{
+            font-family: 'Verdana';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 13px;
+            line-height: 16px;
+            color: #FFFFFF;
+            display: flex;
+            align-items: center;
+        }
+    }
+    &__download{
+        &-text{
+            font-family: 'Verdana';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 12.8988px;
+            line-height: 22px;
+            color: #FFFFFF;
+            margin-bottom: 13px;
+        }
+        &-link{
+            display: block;
+        }
+        &-link:not(:last-child){
+            margin-bottom: 13px;
+        }
+    }
+    &__socials{
+        display: flex;
+        justify-content: flex-end;
+        padding: 5px 0;
+        &-link{}
+        &-link:not(:last-child){
+            margin-right: 16px;
+        }
+        &-pic{
+            width: 26px;
+            height: 26px;
+            fill: #fff;
+        }
+    }
+}
+
+.phone{
+    width: 15px;
+    height: 15px;
+    margin-right: 10px;
+}

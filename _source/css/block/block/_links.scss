@@ -1,0 +1,63 @@
+.links{
+    position: relative;
+    margin-bottom: 86px;
+    &__content{
+        display: flex;
+        flex-direction: column;
+    }
+    &__btns{
+        display: flex;
+        margin-bottom: 32px;
+        @include m-phone{
+            flex-wrap: wrap;
+        }
+    }
+    &__btn{
+        padding: 8px 12px;
+        border-radius: 32px;
+        font-style: normal;
+        font-weight: 350;
+        font-size: 20px;
+        line-height: 42px;
+        color: #2F4590;
+        @include m-phone{
+            margin-bottom: 10px;
+        }
+    }
+    &__btn:not(:last-child){
+        margin-right: 16px;
+    }
+    &__items{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    &__item{
+        padding: 0 10px;
+        border-right: 1px solid rgba(121, 160, 191, 1);
+        display: flex;
+        align-items: center;
+        &-text{
+            font-style: normal;
+            font-weight: 325;
+            font-size: 20px;
+            line-height: 42px;
+            letter-spacing: 0.04em;
+            color: #28303F;
+            @include m-phone{
+                font-size: 16px;
+            }
+            
+        }
+        &-text:hover{
+            background: #84a8ec;
+        }
+    }
+    &__item:last-child{
+        border: none;
+    }
+}
+
+.btn-blue{
+    color: #fff;
+    background: #2F4590;
+}

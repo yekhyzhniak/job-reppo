@@ -46,13 +46,19 @@ header{
                 // width: 400px;
             }
             @include m-phone{
-            //     width: 10px;
+                width: 250px;
                 height: 100%;
             }
         }
         &-item:first-child{
             @include m-phone{
                 flex-direction: column;
+            }
+        }
+        &-item:last-child{
+            @include m-phone{
+                display: flex;
+                justify-content: space-between;
             }
         }
     }
@@ -101,6 +107,9 @@ header{
         display: flex;
         align-items: center;
         justify-content: space-between;
+        @include m-phone{
+            width: 250px;
+        }
         &-input{
             border: none;
             color: #2F4590;
@@ -126,9 +135,6 @@ header{
             font-size: 14px;
             line-height: 17px;
             color: #2F4590;
-        }
-        @include m-phone{
-            width: 200px;
         }
     }
 }
