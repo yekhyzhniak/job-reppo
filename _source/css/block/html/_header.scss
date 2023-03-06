@@ -61,21 +61,20 @@ header{
                 justify-content: space-between;
             }
         }
-        &-item:nth-child(2){
-            background: #ECF5FB;
-            border-radius: 20px;
-        }
     }
     &__brg{
         margin-right: 20px;
         &-select{
+            padding: 5px 15px;
             border: none;
+            background: #ECF5FB;
             font-family: 'Gotham Rounded', sans-serif;
             font-style: normal;
             font-weight: 325;
             font-size: 13px;
             line-height: 24px;
             color: #28303F;
+            
             @include m-tablet{
                 font-size: 20px;
             }
@@ -98,13 +97,14 @@ header{
         margin-left: 20px;
     }
     &__btn{
-        width: 90px;
-        height: 44px;
-        border-radius: 24px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        
         &-link{
+            width: 90px;
+            height: 44px;
+            border-radius: 24px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             @include m-tablet{
                 font-size: 20px;
             }
@@ -115,43 +115,34 @@ header{
         color: #2F4590;
     }
     &__search{
-        width: 300px;
-        height: 40px;
         display: flex;
         align-items: center;
-        justify-content: space-between;
-        @include m-phone{
-            width: 280px;
-        }
+        justify-content: center;
+        padding: 5px 10px;
+        border-radius: 10px;
+        background: #ECF5FB;
+        
         &-input{
             border: none;
-            color: #2F4590;
+            background: #ECF5FB;
             font-family: 'Gotham Rounded', sans-serif;
             font-style: normal;
             font-weight: 300;
             font-size: 14px;
             line-height: 17px;
-            background: #ECF5FB;
-            @include m-phone{
+            color: #2F4590;
+            width: 200px;
+            @include m-tablet{
                 font-size: 20px;
             }
         }
-        &-select{
-            width: 50px;
-            border: none;
-            color: #2F4590;
-            background: #ECF5FB;
-        }
-        &-value{
-            font-family: 'Gotham Rounded', sans-serif;
-            font-style: normal;
-            font-weight: 300;
-            font-size: 14px;
-            line-height: 17px;
-            color: #2F4590;
+        &-pic{
+            width: 20px;
+            height: 20px;
         }
     }
 }
+
 
 .menu-btn {
 	width: 36px;
@@ -211,4 +202,27 @@ header{
 			}
 		}
 	}
+}
+
+.btn-white:hover{
+    background: #ECF5FB;
+    box-shadow: 0 15px 20px rgba(135, 198, 230, 0.4);
+    color: rgb(69, 69, 152);
+    transform: translateY(-7px);
+    transition: 0.2s;
+}
+
+.btn-blue:hover{
+    box-shadow: 0 0 10px 0 #2F4590 inset, 0 0 10px 4px #2F4590;
+    color: #2F4590;
+    background: white;
+    transition: .2s ease-in-out;
+}
+
+.btn-yellow:hover{
+    box-shadow: 0 0 10px 0 #fff inset, 0 0 10px 4px #fff;
+    color: #2F4590;
+    background: transparent;
+    transition: .2s ease-in-out;
+    font-size: 18px;
 }

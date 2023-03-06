@@ -60,6 +60,9 @@
                 font-size: 32px;
             }
         }
+        &-title:hover{
+            text-decoration: underline;
+        }
         &-link{
             display: block;
             font-family: 'Verdana';
@@ -74,6 +77,9 @@
             @include m-phone{
                 font-size: 16px;
             }
+        }
+        &-link:hover{
+            text-decoration: underline;
         }
         &-link:not(:last-child){
             margin-bottom: 10px;
@@ -130,6 +136,10 @@
             width: 26px;
             height: 26px;
             fill: #fff;
+        }
+        &-pic:hover{
+            margin-top: -5px;
+            transition: 0.2s;
         }
     }
 }
