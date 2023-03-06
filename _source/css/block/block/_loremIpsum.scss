@@ -1,5 +1,8 @@
 .loremIpsum{
     position: relative;
+    border-radius: 32px;
+    overflow: hidden;
+    margin-bottom: 30px;
     &__bg{
         position: absolute;
         z-index: 0;
@@ -7,8 +10,6 @@
         transform: translateX(50%);
         width: 100%;
         height: 100%;
-        //background: linear-gradient(82.91deg, rgba(32, 28, 28, 0.66) 6.85%, rgba(0, 0, 0, 0.332725) 50.73%, rgba(0, 0, 0, 0) 95.34%), url(.jpg), #FFFFFF;
-        border-radius: 32px;
         &-pic{
             width: 100%;
             height: 100%;
@@ -23,7 +24,7 @@
         height: 100%;
         padding: 439px 0 32px 0;
         z-index: 3;
-        
+        background: linear-gradient(to bottom right,rgba(1,1,1,.5),transparent);
     }
     &__bar{
         display: flex;

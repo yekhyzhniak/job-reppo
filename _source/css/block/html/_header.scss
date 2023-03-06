@@ -61,6 +61,10 @@ header{
                 justify-content: space-between;
             }
         }
+        &-item:nth-child(2){
+            background: #ECF5FB;
+            border-radius: 20px;
+        }
     }
     &__brg{
         margin-right: 20px;
@@ -72,6 +76,9 @@ header{
             font-size: 13px;
             line-height: 24px;
             color: #28303F;
+            @include m-tablet{
+                font-size: 20px;
+            }
         }
         @include m-phone{
             margin: 0;
@@ -83,6 +90,9 @@ header{
         font-weight: 325;
         font-size: 13px;
         line-height: 24px;
+        @include m-tablet{
+            font-size: 20px;
+        }
     }
     &__btn:not(:first-child){
         margin-left: 20px;
@@ -94,6 +104,11 @@ header{
         display: flex;
         justify-content: center;
         align-items: center;
+        &-link{
+            @include m-tablet{
+                font-size: 20px;
+            }
+        }
     }
     &__btn:last-child{
         background: #ECF5FB;
@@ -102,31 +117,30 @@ header{
     &__search{
         width: 300px;
         height: 40px;
-        border-radius: 100px;
-        background: #ECF5FB;
         display: flex;
         align-items: center;
         justify-content: space-between;
         @include m-phone{
-            width: 250px;
+            width: 280px;
         }
         &-input{
             border: none;
             color: #2F4590;
-            background: #ECF5FB;
             font-family: 'Gotham Rounded', sans-serif;
             font-style: normal;
             font-weight: 300;
             font-size: 14px;
             line-height: 17px;
-            color: #2F4590;
+            background: #ECF5FB;
+            @include m-phone{
+                font-size: 20px;
+            }
         }
         &-select{
             width: 50px;
             border: none;
             color: #2F4590;
             background: #ECF5FB;
-            
         }
         &-value{
             font-family: 'Gotham Rounded', sans-serif;

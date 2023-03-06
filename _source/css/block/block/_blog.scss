@@ -1,8 +1,8 @@
 .blog{
     position: relative;
+    margin-bottom: 30px;
     &__content{
         position: relative;
-        padding: 67px 0;
         @include m-phone{
             padding: 67px 0 57px 0;
         }
@@ -15,11 +15,19 @@
         display: flex;
         justify-content: flex-start;
         margin-bottom: 32px;
+        @include m-phone{
+            text-align: center;
+        }
     }
     &__cards{
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
+        @include m-phone{
+            flex-wrap: nowrap;
+            flex-direction: column;
+            align-items: center;
+        }
 
         &-item{
             background: #ECF5FB;
@@ -33,10 +41,15 @@
                 padding: 20px;
             }
             @include m-phone{
-                flex-basis: calc(100% / 2 - 10px);
-                max-width: calc(100% / 2 - 10px);
-                margin-bottom: 10px;
+                flex-basis: calc(100% / 1 - 10px);
+                max-width: calc(100% / 1 - 10px);
+                display: flex;
+                flex-direction: column;
+                align-items: center;
             }
+        }
+        &-item:not(:last-child){
+            margin-bottom: 15px;
         }
         &-itemTitle{
             font-family: 'Verdana';
@@ -46,6 +59,9 @@
             line-height: 32px;
             color: #2F4590;
             margin-bottom: 12px;
+            @include m-phone{
+                margin-bottom: 25px;
+            }
         }
         &-itemSubtitle{
             font-style: normal;

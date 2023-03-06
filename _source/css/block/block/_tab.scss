@@ -2,7 +2,7 @@
     position: relative;
     border-radius: 32px;
     overflow: hidden;
-    margin-bottom: 67px;
+    margin-bottom: 30px;
 
     &__bg{
         position: absolute;
@@ -26,6 +26,7 @@
         padding-left: 30px;
         @include m-tablet{
             align-self: center;
+            padding-left: 0;
         }
         @include m-phone{
             padding: 30px 10px 0 10px;

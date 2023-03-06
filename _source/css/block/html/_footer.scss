@@ -57,7 +57,7 @@
                 font-size: 16px;
             }
             @include m-phone{
-                font-size: 20px;
+                font-size: 32px;
             }
         }
         &-link{
@@ -70,6 +70,9 @@
             color: #EAEBDC;
             @include m-tablet{
                 font-size: 12px;
+            }
+            @include m-phone{
+                font-size: 16px;
             }
         }
         &-link:not(:last-child){
@@ -87,6 +90,9 @@
         }
     }
     &__download{
+        @include m-tablet-wide{
+            max-width: 250px;
+        }
         @include m-tablet{
             max-width: 170px;
         }

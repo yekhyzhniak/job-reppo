@@ -4,6 +4,7 @@
     @include m-tablet{
         flex-wrap: wrap;
         justify-content: center;
+        margin-bottom: 30px;
     }
     &__link{
         display: block;
@@ -20,7 +21,6 @@
     &__link:not(:last-child){
         margin-right: 20px;
         @include m-tablet{
-            margin-right: 0;
             font-size: 24px;
             margin-bottom: 20px;
         }
