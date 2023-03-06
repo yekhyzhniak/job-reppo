@@ -31,6 +31,9 @@
         display: flex;
         flex-wrap: wrap;
     }
+    &__block{
+        display: none;
+    }
     &__item{
         padding: 0 10px;
         border-right: 1px solid rgba(121, 160, 191, 1);
@@ -60,4 +63,8 @@
 .btn-blue{
     color: #fff;
     background: #2F4590;
+}
+
+.show{
+    display: block;
 }

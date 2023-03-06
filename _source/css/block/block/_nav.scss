@@ -29,6 +29,9 @@
             font-size: 24px;
             margin-bottom: 20px;
         }
+        @include m-phone{
+            margin-right: 0;
+        }
     }
 
 }

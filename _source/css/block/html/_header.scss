@@ -16,9 +16,15 @@ header{
     }
     &__logo{
         margin-right: 20px;
+        width: 56px;
+            height: 34px;
         @include m-tablet{
             margin-right: 0;
             align-self: flex-start;
+        }
+        &-pic{
+            object-fit: cover;
+            
         }
     }
     &__menu{
@@ -31,9 +37,11 @@ header{
             align-items: center;
             justify-content: space-between;
             padding-top: 100px;
+            width: 450px;
+            display: none;
         }
         @include m-phone{
-            // display: none;
+            width: 220px;
         }
         
         &-item{
@@ -43,10 +51,10 @@ header{
             height: 40px;
             @include m-tablet{
                 margin-bottom: 30px;
-                // width: 400px;
+                width: 450px;
             }
             @include m-phone{
-                width: 250px;
+                width: 220px;
                 height: 100%;
             }
         }
@@ -62,6 +70,7 @@ header{
             }
         }
     }
+    
     &__brg{
         margin-right: 20px;
         &-select{
@@ -188,7 +197,7 @@ header{
 			transform: translateY(8px);
 		}
 	}
-	&.active {
+	&.actived {
 		span {
 			&:nth-child(1) {
 				transform: translateY(0) rotate(-45deg);
@@ -225,4 +234,11 @@ header{
     background: transparent;
     transition: .2s ease-in-out;
     font-size: 18px;
+}
+
+
+
+
+.show{
+    display: block !important;
 }
