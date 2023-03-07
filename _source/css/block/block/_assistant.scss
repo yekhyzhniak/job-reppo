@@ -53,8 +53,11 @@
         }
     }
     &__job{
-        display: flex;
-        max-width: 862px;
+        position: relative;
+        // display: flex;
+        width: 862px;
+        height: 376px;
+        overflow: hidden;
         background: #ECF5FB;
         border-radius: 32px;
         @include m-tablet-wide{
@@ -68,9 +71,18 @@
             width: 335px;
             flex-direction: column;
             text-align: center;
+            height: 550px;
+            //
         }
-        
+        &-item{
+            position: relative;
+            height: 100%;
+            display: none;
+        }
         &-content{
+            display: flex;
+        }
+        &-texts{
             max-width: 450px;
             padding: 63px 27px 46px 27px;
             @include m-phone{
@@ -84,6 +96,9 @@
             line-height: 25px;
             color: #2F4590;
             margin-bottom: 33px;
+            @include m-phone{
+                font-size: 24px;
+            }
         }
         &-subtitle{
             font-style: normal;
@@ -92,30 +107,37 @@
             line-height: 25px;
             color: #727272;
             margin-bottom: 70px;
+            @include m-phone{
+                margin-bottom: 30px;
+            }
         }
         &-slider{
             display: flex;
             max-width: 65px;
+            position: absolute;
+            left: 30px;
+            bottom: 50px;
+            z-index: 2;
             @include m-phone{
-                margin: 0 auto;
+                left: 50%;
+                transform: translateX(-50%);
+                bottom: 275px;
             }
         }
-        &-btns{
-            height: 8px;
-            width: 8px;
-            border-radius: 4px;
+        &-btns{            
+            height: 12px;
+            width: 12px;
+            border-radius: 6px;
             background: #fff;
             cursor: pointer;
         }
         &-btns:not(:last-child){
             margin-right: 9px;
         }
-        &-cont{
-            display: flex;
-            align-items: flex-end;
-        }
         &-pic{
-            margin-bottom: -15px;
+            position: absolute;
+            bottom: -20px;
+            right: 0;
         }
         &-img{
             width: 361px;
@@ -126,4 +148,21 @@
 }
 .active{
     background: #2F4590;
+}
+
+.activer{
+    display: block;
+}
+
+.bg1{
+    background: #ECF5FB;
+}
+.bg2{
+    background: #76b29b;
+}
+.bg3{
+    background: #9eb680;
+}
+.bg4{
+    background: #a57a97;
 }
